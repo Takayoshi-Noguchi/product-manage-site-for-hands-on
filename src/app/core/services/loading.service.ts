@@ -5,5 +5,22 @@ import { Injectable } from '@angular/core';
 })
 export class LoadingService {
 
-  constructor() { }
+  isLoading: boolean;
+
+  constructor() {}
+
+  /**
+   * Starts loading
+   */
+  startLoading() {
+    this.isLoading = true;
+  }
+
+  /**
+   * Stops loading
+   */
+  stopLoading() {
+    this.isLoading = false;
+  }
+
 }
